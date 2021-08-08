@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Dark-Gray: hsl(0, 0%, 63%);
+     --Black: hsl(0, 0%, 0%);
+    --White: hsl(0, 0%, 100%);
+     --Very-Dark-Gray: hsl(0, 0%, 27%);
+}
+
+.close-icon  {
+    cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+    font-weight: bolder;
+}
+
+a {
+    text-decoration: none;
+    color: var(--Black)
+}
+
+img {
+   width: 100%;
+   z-index: -10;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body {
+    font-family: Spartan;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.header img {
+    width: 50px;
+    height: 50px;
+}
+
+.hero {
+    position: relative;
+}
+
+.nav-arrow {
+    position: absolute;
+    bottom: 3px;
+    right: 0;
+    background: var(--Black);
+    padding:.8rem 1.5rem
+}
+
+.nav-arrow img {
+    width: 1rem;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.header {
+    position: relative;
+    height: 50vh;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 100%;
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    padding: 2rem;
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateX(-100%);
+    z-index: 100;
+    transition: .3s transform;
+}
+
+.menubar {
+    position: absolute;
+    top: 0;
+    padding: 2rem 20px;
+    display: block;
+}
+
+.menubar img:nth-child(1) {
+    width: 2rem;
+    cursor: pointer;
+}
+
+.menubar img:nth-child(2) {
+    margin-left: 10rem;
+    width: unset;
+}
+
+
+
+
+
+nav ul {
+    display: flex;
+}
+.navigation img {
+    width: 1rem
+}
+
+nav ul li {
+    padding: 0 .8rem;
+}
+
+.hero-text {
+    padding: 2rem 0;
+}
+
+.hero-text h2 {
+    width: 25rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.hero-text p {
+    padding: 1rem 0;
+    line-height: 2;
+    color: var(--Dark-Gray);
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+
+.link img {
+    width: 2rem;
+    margin-left: 10px;
+}
+
+.link {
+    margin: 2rem 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERY */
+
+@media(max-width: 700px) {
+    .show-nav {
+        transform: translateX(0)
+    }
+
+    .menubar nav {
+        display: none;
+    }
+
+    .hidden-mobile {
+        display: none;
+    }
+
+    .hero-text h2 {
+        width: unset;
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+     .nav-arrow img {
+         width: 1rem;
+     }
+
+    .nav-arrow {
+        right: 0;
+        background: var(--Black);
+        padding: .5rem 1rem
+    }
+
+}
+
+@media (min-width: 700px) {
+    .menu {
+        display: none;
+    }
+
+    .menubar img:nth-child(2){
+        margin: unset;
+    }
+
+    .menubar  {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 40px;
+    }
+
+        .menubar nav {
+            margin-left: 10vw;
+    }
+
+    .hidden-desktop {
+        display: none;
+    }
+
+    .menubar nav ul li a {
+        color: var(--White);
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+        grid-gap: 5rem;
+    }
+
+    .hero-text p {
+        text-align: justify;
+        padding-right: 10rem;
+    }
+
+  
+     .main-text {
+        display: flex;
+    }
+
+     .main-text .hero-text p {
+      padding: unset;
+    }
+
+    img{
+        width: 50rem;
+    }
+
+}
+
+@media(max-width: 250px) {
+    .menubar img:nth-child(2) {
+        margin-left: 5rem;
+        width: unset;
+    }
+
+      .hero-text h2 {
+          width: unset;
+          font-size: 1rem;
+      }
+
+         .hero-text p {
+            font-size: .6rem;
+         }
+
+         .link {
+             font-size: 1rem
+         }
+
+              .nav-arrow img {
+                  width: .65rem;
+              }
+
+              .nav-arrow {
+                  right: 0;
+                  background: var(--Black);
+                  padding: .4rem 0;
+              }
+
+              nav ul li {
+                  padding: 0 .1rem;
+              }
+
+
+     
+}
